@@ -1,57 +1,65 @@
-*, *::before, *::after{
-    box-sizing: border-box;
-    font-family: Gothan Rounded, sans-serif;
-    font-weight: normal;
-}
-
 body{
-    background: rgb(55, 111, 161);
-    padding: 0;
-    margin: 0;
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.calculator {
+    box-shadow: 0 4px 6px #74ebd5;
+    width: 390px;
+    height: 700px;
+    margin-top: 30px;
+    margin-left: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 0.1px solid #cccccc12 transparent;
+    border-radius: 5px;
+   background-color: #040608;
 }
 
-.calculator-grid{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows:minmax(120px, auto) repeat(5, 100px);
+input[type="text"] {
+    width: 340px;
+    height: 150px;
+    margin-left: 10px;
+    box-shadow: 0 4px 6px rgb(77, 74, 74);
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-.calculator-grid > button{
+button {
+    
+    border-radius: 20px;
+    width: 90px;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
-    font-size: 2rem;
-    border: 1px solid white;
-    outline: none;
-    background-color: rgb(157, 157, 92);
+}
+.effacer{
+    width: 170px;
+    background-color: #aae03d;
+    margin-right: 15px;
+}
+.zero{
+    width: 115px;
+}
+.signe{
+    background-color: rgb(182, 182, 3);
+    width: 50px;
+}
+.contenaire{
+    display:grid;
+    margin-top: 80px;
+    
 }
 
-.calculator-grid > button:hover {
-    background-color: rgb(157, 224, 25);
-}
-
-.span-two{
-    grid-column: span 2;
-}
-
-.output{
-   grid-column: 1 / -1; 
-   background-color: rgb(95, 87, 87);
-   display: flex;
-   align-items: flex-end;
-   justify-content: space-around;
-   flex-direction: column;
-   padding: 10px;
-   word-wrap: break-word;
-   word-break: break-all;
-}
-
-.output .previous-operand{
-    color:rgb(225,255, 255, .75);
-    font-size: 2.5rem;
-}
-.output .current-operand{
-    color:white;
-    font-size: 2.5rem;
+#plus{
+    width: 115px;
 }
